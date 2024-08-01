@@ -1,9 +1,6 @@
 console.log("Hello World!");
 
 function youSpinMeRound() {
-    console.log(refrain1());
-    console.log(refrain1());
-    
     //verse 1
     console.log("If I, I get to know your name");
     console.log("Well I could trace");

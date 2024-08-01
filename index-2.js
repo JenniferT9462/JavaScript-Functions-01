@@ -1,10 +1,4 @@
 function song() {
-    let r1;
-    r1 = refrain1(); // this puts my "words" into r
-    console.log(r1);
-    console.log(r1);
-
-    
     //verse 1
     console.log("If I, I get to know your name");
     console.log("Well I could trace");
@@ -22,7 +16,8 @@ function song() {
     console.log("My way now, baby\n");
 
     console.log(r2);
-
+    let r1;
+    r1 = refrain1();
     console.log(r1);
     console.log(r1);
 
@@ -48,7 +43,6 @@ function song() {
     console.log(r1);
 }
 song()
-
 
 function refrain1() {
     let words = ""; 
