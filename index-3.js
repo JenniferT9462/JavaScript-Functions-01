@@ -35,11 +35,16 @@ function youSpinMeRound() {
 }
 youSpinMeRound();
 
+function round() {
+    return "'round";
+
+}
+
 function refrain1() {
     let words = ""; 
-    words += "You spin me right 'round, baby\n";
-    words += "Right 'round like a record, baby\n";
-    words += "Right 'round, 'round, 'round\n";
+    words += `You spin me right ${round()}, baby\n`;
+    words += `Right ${round()} like a record, baby\n`;
+    words += `Right ${round()}, ${round()}, 'round\n`;
     return words;
 
 }
