@@ -1,5 +1,12 @@
 console.log("Hello World!");
 
+function audio() {
+  let mySound = new Audio('youSpinMeRound.mp3');
+  mySound.volume = 0.10; // 10%
+  mySound.play()
+}
+audioBtn.onclick = audio;
+
 function youSpinMeRound() {
   //Verse 1
   let verse1 = "";
@@ -39,11 +46,6 @@ function youSpinMeRound() {
   refrain3();
   refrain1();
   refrain1();
-
-  let mySound = new Audio('youSpinMeRound.mp3');
-  mySound.volume = 0.10; // 10%
-  mySound.play()
-  
   lyrics.innerHTML += `<a href="https://www.lyrics.com/lyric-lf/730793/Dead+or+Alive/You+Spin+Me+Round" target="_blank">Link to Lyrics</a>`;
 }
 lyricsBtn.onclick = youSpinMeRound;
