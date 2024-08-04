@@ -1,5 +1,5 @@
 console.log("Hello World!");
-
+//Add a audio clip of the refrain and attach it to a button
 function audio() {
   let mySound = new Audio('youSpinMeRound.mp3');
   mySound.volume = 0.10; // 10%
@@ -50,12 +50,17 @@ function youSpinMeRound() {
 }
 lyricsBtn.onclick = youSpinMeRound;
 
+function round() {
+  return "'round";
+
+}
 function refrain1() {
-  let words1 = "";
-  words1 += "You spin me right 'round, baby<br>";
-  words1 += "Right 'round like a record, baby<br>";
-  words1 += "Right 'round, 'round, 'round<br><br>";
+  let words1 = ""; 
+  words1 += `You spin me right ${round()}, baby<br>`;
+  words1 += `Right ${round()} like a record, baby<br>`;
+  words1 += `Right ${round()}, ${round()}, 'round<br><br>`;
   lyrics.innerHTML += words1;
+
 }
 function refrain2() {
   let words2 = "";
