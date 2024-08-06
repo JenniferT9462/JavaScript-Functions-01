@@ -2,7 +2,7 @@ console.log("Hello World!");
 //Add a audio clip of the refrain and attach it to a button
 function audio() {
   let mySound = new Audio('youSpinMeRound.mp3');
-  mySound.volume = 0.10; // 10%
+  mySound.volume = 0.10; // Make audio volume at 10%
   mySound.play()
 }
 audioBtn.onclick = audio;
@@ -48,7 +48,11 @@ function youSpinMeRound() {
   refrain1();
   lyrics.innerHTML += `<a href="https://www.lyrics.com/lyric-lf/730793/Dead+or+Alive/You+Spin+Me+Round" target="_blank">Link to Lyrics</a>`;
 }
-lyricsBtn.onclick = youSpinMeRound;
+function songHandler() {
+  youSpinMeRound();
+}
+let lyricsBtn = document.getElementById("lyricsBtn");
+lyricsBtn.addEventListener('click', songHandler);
 
 function round() {
   return "'round";
