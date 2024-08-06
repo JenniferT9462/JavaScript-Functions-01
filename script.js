@@ -9,47 +9,47 @@ audioBtn.onclick = audio;
 
 function youSpinMeRound() {
   //Verse 1
-  let verse1 = "";
-  verse1 += "If I, I get to know your name<br>";
-  verse1 += "Well I could trace<br>";
-  verse1 += "Your private number, baby<br><br>";
-  lyrics.innerHTML += verse1;
-
-  refrain2();
+  let lyrics = "";
+  lyrics += "If I, I get to know your name\n";
+  lyrics += "Well I could trace\n";
+  lyrics += "Your private number, baby\n\n";
+  
+  lyrics += refrain2();
 
   //Verse 2
-  let verse2 = "";
-  verse2 += "I want some, want some<br>";
-  verse2 += "I've set my sights on you<br>";
-  verse2 += "(Like no one else will do)<br>";
-  verse2 += "And I, I've got to have<br>";
-  verse2 += "My way now, baby<br><br>";
-  lyrics.innerHTML += verse2;
+  lyrics += "I want some, want some\n";
+  lyrics += "I've set my sights on you\n";
+  lyrics += "(Like no one else will do)\n";
+  lyrics += "And I, I've got to have\n";
+  lyrics += "My way now, baby\n\n";
+  
 
-  refrain3();
+  lyrics += refrain3();
 
   //Verse 3
-  let verse3 = "";
-  verse3 += "I, I got to be your friend now, baby<br>";
-  verse3 += "And I, I-I-I-I would like to move<br>";
-  verse3 += "In just a little bit closer<br><br>";
-  lyrics.innerHTML += verse3;
+  lyrics += "I, I got to be your friend now, baby\n";
+  lyrics += "And I, I-I-I-I would like to move\n";
+  lyrics += "In just a little bit closer\n\n";
+  
 
-  refrain3();
+  lyrics += refrain3();
 
   //Verse 4
-  let verse4 = "";
-  verse4 += "I want your love<br>";
-  verse4 += "I want your love<br><br>";
-  lyrics.innerHTML += verse4;
+  lyrics += "I want your love\n";
+  lyrics += "I want your love\n\n";
+  
 
-  refrain3();
-  refrain1();
-  refrain1();
-  lyrics.innerHTML += `<a href="https://www.lyrics.com/lyric-lf/730793/Dead+or+Alive/You+Spin+Me+Round" target="_blank">Link to Lyrics</a>`;
+  lyrics += refrain3();
+  lyrics += refrain1();
+  lyrics += refrain1();
+  return lyrics;
 }
+let song = document.getElementById("youSpinMeRound");
 function songHandler() {
-  youSpinMeRound();
+  let songLyrics;
+  songLyrics = youSpinMeRound();
+  song.innerHTML = songLyrics;
+  song.innerHTML += `<a href="https://www.lyrics.com/lyric-lf/730793/Dead+or+Alive/You+Spin+Me+Round" target="_blank">Link to Lyrics</a>`;
 }
 let lyricsBtn = document.getElementById("lyricsBtn");
 lyricsBtn.addEventListener('click', songHandler);
@@ -60,22 +60,24 @@ function round() {
 }
 function refrain1() {
   let words1 = ""; 
-  words1 += `You spin me right ${round()}, baby<br>`;
-  words1 += `Right ${round()} like a record, baby<br>`;
-  words1 += `Right ${round()}, ${round()}, 'round<br><br>`;
-  lyrics.innerHTML += words1;
+  words1 += `You spin me right ${round()}, baby\n`;
+  words1 += `Right ${round()} like a record, baby\n`;
+  words1 += `Right ${round()}, ${round()}, 'round\n\n`;
+  return words1;
 
 }
 function refrain2() {
   let words2 = "";
-  words2 += "All I know is that to me<br>";
-  words2 += "You look like you're lots of fun<br>";
-  words2 += "Open up your lovin' arms<br>";
-  words2 += "Watch out, here I come<br><br>";
-  lyrics.innerHTML += words2;
+  words2 += "All I know is that to me\n";
+  words2 += "You look like you're lots of fun\n";
+  words2 += "Open up your lovin' arms\n";
+  words2 += "Watch out, here I come\n\n";
+  return words2;
 }
 function refrain3() {
-  refrain2();
-  refrain1();
-  refrain1();
+  let refrain3 = "";
+  refrain3 += refrain2();
+  refrain3 += refrain1();
+  refrain3 += refrain1();
+  return refrain3;
 }
